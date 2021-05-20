@@ -9,6 +9,13 @@ public class MultiParameters {
 				max = params[i];	
 		}
 		
+		printMaximum(params, max);
 		return max;
+	}
+	public static <E> void printMaximum(E[] params, E max) {
+		for(int i=1; i< params.length; i+=params.length) {
+			System.out.println("Maximum: "+ max);
+		}	
+		
 	}
 }
