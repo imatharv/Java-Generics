@@ -25,4 +25,25 @@ public class GenericsTest {
     	int max = Generics.maxInteger(4,5,7);
         assertEquals( 7 , max );
     }
+    
+    @Test
+    public void shouldReturnTrue_WhenMaxDoubleAt1stPosition ()
+    {
+    	double max=Generics.maxDouble(5.1,1.3,2.8);
+        assertEquals( 5.1 , max , 0);
+    }
+    
+    @Test
+    public void shouldReturnTrue_WhenMaxDoubleAt2ndPosition()
+    {
+    	double max=Generics.maxDouble(1.3,5.1,2.8);
+        assertEquals( 5.1 , max , 0 );
+    }
+    
+    @Test
+    public void shouldReturnTrue_WhenMaxDoubleAt3rdPosition()
+    {
+    	double max=Generics.maxDouble(1.3,2.8,5.1);
+        assertEquals( 5.1 , max , 0 );
+    }
 }
