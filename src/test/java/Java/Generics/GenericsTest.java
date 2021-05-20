@@ -29,21 +29,42 @@ public class GenericsTest {
     @Test
     public void shouldReturnTrue_WhenMaxDoubleAt1stPosition ()
     {
-    	double max=Generics.maxDouble(5.1,1.3,2.8);
+    	double max = Generics.maxDouble(5.1,1.3,2.8);
         assertEquals( 5.1 , max , 0);
     }
     
     @Test
     public void shouldReturnTrue_WhenMaxDoubleAt2ndPosition()
     {
-    	double max=Generics.maxDouble(1.3,5.1,2.8);
+    	double max = Generics.maxDouble(1.3,5.1,2.8);
         assertEquals( 5.1 , max , 0 );
     }
     
     @Test
     public void shouldReturnTrue_WhenMaxDoubleAt3rdPosition()
     {
-    	double max=Generics.maxDouble(1.3,2.8,5.1);
+    	double max = Generics.maxDouble(1.3,2.8,5.1);
         assertEquals( 5.1 , max , 0 );
+    }
+    
+    @Test
+    public void shouldReturnTrue_WhenMaxStringAt1stPosition ()
+    {
+    	String max = Generics.maxString("Peach","Apple","Banana");
+        assertEquals( "Peach" , max );
+    }
+    
+    @Test
+    public void shouldReturnTrue_WhenMaxStringAt2ndPosition()
+    {
+    	String max = Generics.maxString("Apple","Peach","Banana");
+        assertEquals( "Peach" , max );
+    }
+    
+    @Test
+    public void shouldReturnTrue_WhenMaxStringAt3rdPosition()
+    {
+    	String max = Generics.maxString("Apple","Banana","Peach");
+        assertEquals( "Peach" , max );
     }
 }
